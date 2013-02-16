@@ -82,6 +82,8 @@ class @MetricSeries
       when "storefileSizeMB" then "Storefile Size"
       when "memstoreSizeMB" then "Memstore Size"
       when "compactions" then "Compactions"
+      when "readRequests" then "Read Requests"
+      when "writeRequests" then "Write Requests"
 
   getHumanReadableUnit: ->
     switch @metricName
@@ -89,3 +91,5 @@ class @MetricSeries
       when "storefileSizeMB" then "MB"
       when "memstoreSizeMB" then "MB"
       when "compactions" then ""
+      when "readRequests" then ""
+      when "writeRequests" then ""

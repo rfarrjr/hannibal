@@ -24,6 +24,12 @@ object MetricDef {
   val MEMSTORE_SIZE_MB = "memstoreSizeMB"
   def MEMSTORE_SIZE_MB(region:String) : MetricDef = findRegionMetricDef(region, MEMSTORE_SIZE_MB)
 
+  val READ_REQUESTS = "readRequests"
+  def READ_REQUESTS(region:String) : MetricDef = findRegionMetricDef(region, READ_REQUESTS)
+
+  val WRITE_REQUESTS = "writeRequests"
+  def WRITE_REQUESTS(region:String) : MetricDef = findRegionMetricDef(region, WRITE_REQUESTS)
+
   val STOREFILES  = "storefiles"
   def STOREFILES(region:String) : MetricDef  = findRegionMetricDef(region, STOREFILES)
 

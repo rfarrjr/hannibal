@@ -33,6 +33,10 @@ class UpdateMetricsActor extends Actor {
             updated = updated + 1
           if(MetricDef.MEMSTORE_SIZE_MB(regionInfo.regionName).update(regionInfo.memstoreSizeMB))
             updated = updated + 1
+          if(MetricDef.READ_REQUESTS(regionInfo.regionName).update(regionInfo.readRequests))
+            updated = updated + 1
+          if(MetricDef.WRITE_REQUESTS(regionInfo.regionName).update(regionInfo.writeRequests))
+            updated = updated + 1
         }
         updated
       })
